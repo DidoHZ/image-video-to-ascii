@@ -1,9 +1,12 @@
+#if !defined(VIDEO_TO_ASCII)
+#define VIDEO_TO_ASCII
+
 #include <opencv2/opencv.hpp>
 
 #include "image_to_ascii.hpp"
 
 
-void video_to_ascii(cv::VideoCapture* cap){
+void video_to_ascii(cv::VideoCapture* cap, cv::Size size){
     Image image = Image();
 
       while(1)
@@ -19,8 +22,8 @@ void video_to_ascii(cv::VideoCapture* cap){
 
             cv::Mat resized;
 
-            // resize frame to w:250 x h:50
-            resize(frame, resized, cv::Size(250*2, 50*2));
+            // resize frame
+            resize(frame, resized, size);
 
             image = Image((unsigned char*) resized.data , resized.cols, resized.rows, resized.channels());
 
@@ -36,3 +39,5 @@ void video_to_ascii(cv::VideoCapture* cap){
                   break;
       } 
 }
+
+#endif // VIDEO_TO_ASCII

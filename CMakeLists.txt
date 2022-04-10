@@ -1,10 +1,8 @@
 cmake_minimum_required(VERSION 3.0)
-set( CMAKE_TOOLCHAIN_FILE "/home/dido/Desktop/c++/vcpkg/scripts/buildsystems/vcpkg.cmake" )
+set( CMAKE_TOOLCHAIN_FILE cmake(1) )
 project(test)
 
-add_executable(main ascii_video.cpp ./headers/video_to_ascii.hpp)
-
-set( OpenCV "/home/dido/Desktop/c++/vcpkg/installed/x64-linux/share/opencv" )
+add_executable(ascii_video ascii_video.cpp ./headers/video_to_ascii.hpp)
 
 find_package(OpenCV CONFIG REQUIRED)
 
@@ -16,7 +14,10 @@ if(OpenCV_FOUND)
     # Additional Library Directories
     link_directories( ${OpenCV_LIB_DIR} )
 
+    # Additional output Directory
+    set(EXECUTABLE_OUTPUT_PATH ./build)
+
     # Additional Dependencies
-    target_link_libraries( main ${OpenCV_LIBS} )
+    target_link_libraries( ascii_video ${OpenCV_LIBS} )
 
 endif()

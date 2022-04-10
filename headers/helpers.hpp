@@ -1,8 +1,6 @@
 #include <chrono>
 #include "image.hpp"
 
-using namespace std;
-
 /* 
 * Mapping a number from range to a new_range value
 
@@ -18,13 +16,13 @@ float mapper(float x, float in_min, float in_max, float out_min, float out_max){
 
 // calculate a process timing in (ms)
 int timing(Image* image,void (*func)(Image*)){
-    auto start = chrono::system_clock::now();
+    auto start = std::chrono::system_clock::now();
 
     func(image);
 
-    auto end = chrono::system_clock::now();
+    auto end = std::chrono::system_clock::now();
     	
-    auto elapsed = chrono::duration_cast<chrono::milliseconds>(end-start);
+    auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end-start);
 
     return elapsed.count();
 }

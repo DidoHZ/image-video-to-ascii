@@ -2,10 +2,13 @@
 #define IMAGE
 
 #define STB_IMAGE_IMPLEMENTATION
-#include "stb_image.h"
+#include "stb/stb_image.h"
 
 #define STB_IMAGE_RESIZE_IMPLEMENTATION
-#include "stb_image_resize.h"
+#include "stb/stb_image_resize.h"
+
+#include <stdexcept>
+#include <string>
 
 class Image {
 
@@ -24,10 +27,8 @@ class Image {
     Image(std::string file_path){
         data = stbi_load(file_path.c_str(), &width, &height, &channels, 0);
 
-        if(data == nullptr){
-            std::cout << "error while loading image.	" << std::endl;
-            exit(1);
-        }
+        if(data == nullptr)
+            throw std::runtime_error("error while loading image");
     }
 
     Image(unsigned char* data, int width, int height, int channels){
