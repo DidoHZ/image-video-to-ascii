@@ -1,5 +1,5 @@
 #include <chrono>
-#include "image.h"
+#include "image.hpp"
 
 using namespace std;
 

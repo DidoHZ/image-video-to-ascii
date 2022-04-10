@@ -1,7 +1,7 @@
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
-#include "headers/video_to_ascii.h"
+#include "headers/video_to_ascii.hpp"
 
 using namespace cv; 
 

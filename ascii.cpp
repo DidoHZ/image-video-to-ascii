@@ -1,4 +1,4 @@
-#include "headers/image_to_ascii.h"
+#include "headers/image_to_ascii.hpp"
 
 #include <iostream>
 

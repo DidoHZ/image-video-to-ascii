@@ -1,5 +1,5 @@
-#include "helpers.h"
-#include "image.h"
+#include "helpers.hpp"
+#include "image.hpp"
 
 
 #define DENSITY "N@#W$9876543210?!abc;:+=-,._                     "

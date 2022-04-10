@@ -1,6 +1,6 @@
 #include <opencv2/opencv.hpp>
 
-#include "image_to_ascii.h"
+#include "image_to_ascii.hpp"
 
 
 void video_to_ascii(cv::VideoCapture* cap){
@@ -27,7 +27,7 @@ void video_to_ascii(cv::VideoCapture* cap){
             image_to_ascii(&image);
 
             // Display the frame 
-            imshow( "VdoFrame", frame );
+            imshow( "Video Frames", frame );
 
             //Press ESC on keyboard to exit/
             char a=(char)cv::waitKey(25);

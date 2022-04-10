@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.0)
 set( CMAKE_TOOLCHAIN_FILE "/home/dido/Desktop/c++/vcpkg/scripts/buildsystems/vcpkg.cmake" )
 project(test)
 
-add_executable(main ascii_video.cpp)
+add_executable(main ascii_video.cpp ./headers/video_to_ascii.hpp)
 
 set( OpenCV "/home/dido/Desktop/c++/vcpkg/installed/x64-linux/share/opencv" )
 
