@@ -11,7 +11,7 @@ Converting image to ascii using [stblib](https://github.com/nothings/stb) to pro
 
 ![Figure 1-1](resources/test.png)
 
-![Figure 1-2](https://cdn-149.anonfiles.com/R2G32cVbx6/a86367dd-1649612919/Screenshot%20from%202022-04-10%2018-28-39.png)
+![Figure 1-2](resources/result.png)
 
 ### Example :
 
