@@ -5,36 +5,34 @@ C++ project for converting images, videos and camera stream to ascii code using 
 # Image to Ascii
 Converting image to ascii using [stblib](https://github.com/nothings/stb) to process images.
 
-![Figure 1-1](resources/test.png)
-
-![Figure 1-2](resources/result.png)
+<img src="resources/test.png" height="500" width="500"> <img src="resources/result.png" height="500" width="500">
 
 ### Required library [stb](https://github.com/nothings/stb) :
-    > sudo apt install libstb-dev
+    sudo apt install libstb-dev
 
 
 ### Example :
 
-    * > ./ascii -f ./resources/test.png
+    ./ascii -f ./resources/test.png
 
 # Video/Camera to Ascii
 Coverting videos and camera stream to ascii using [opencv](https://github.com/opencv/opencv) library.
 
-### libraries required:
+### Libraries required:
 * ### [stb](https://github.com/nothings/stb) (above):
  ### [opencv](https://github.com/opencv/opencv) :
-    > sudo apt install libopencv-dev
+    sudo apt install libopencv-dev
 
 ### Example :
 * Normal usage open camera:
 
-    > ./video_to_ascii
+   > **./video_to_ascii**
 
 * using arguments:
 
-    * video path:
-        > ./video_to_ascii -f ./resources/video.mp4
-    * set width <b>(height set automatically)</b>:
-        > ./video_to_ascii -f ./resources/video.mp4 -width 150
-    * set width & height:
-        > ./video_to_ascii -f ./resources/video.mp4 -width 500 -height 150
+    * **video path:**
+        > **./video_to_ascii -f ./resources/video.mp4**
+    * **set width (height set automatically):**
+        > **./video_to_ascii -f ./resources/video.mp4 -width 150**
+    * **set width and height:**
+        > **./video_to_ascii -f ./resources/video.mp4 -width 500 -height 150**
