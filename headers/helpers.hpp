@@ -1,5 +1,7 @@
-#include <chrono>
 #include "image.hpp"
+
+#include <algorithm>
+#include <chrono>
 
 /* 
 * Mapping a number from range to a new_range value
@@ -25,4 +27,21 @@ int timing(Image* image,void (*func)(Image*)){
     auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end-start);
 
     return elapsed.count();
+}
+
+int prefer_height(int in_width, int in_height, int new_width){
+    return (in_height / (float) in_width / 3.5) * new_width;
+}
+
+// get option value
+char* getCmdOption(char ** begin, char ** end, const std::string & option){
+    char ** itr = std::find(begin, end, option);
+    if (itr != end && ++itr != end)
+        return *itr;
+    return 0;
+}
+
+// check if option exists withen arguments
+bool cmdOptionExists(char** begin, char** end, const std::string& option){
+    return std::find(begin, end, option) != end;
 }
