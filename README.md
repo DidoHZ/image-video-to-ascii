@@ -1,10 +1,6 @@
 # image-video-to-ascii
 
-### library requirments:
-* ### [stb](https://github.com/nothings/stb) :
-  > sudo apt install libstb-dev
-* ### [opencv](https://github.com/opencv/opencv) :
-  > sudo apt install libopencv-dev
+C++ project for converting images, videos and camera stream to ascii code using third party libreries as [stblib](https://github.com/nothings/stb) and [opencv](https://github.com/opencv/opencv).
 
 # Image to Ascii
 Converting image to ascii using [stblib](https://github.com/nothings/stb) to process images.
@@ -13,12 +9,21 @@ Converting image to ascii using [stblib](https://github.com/nothings/stb) to pro
 
 ![Figure 1-2](resources/result.png)
 
+### Required library [stb](https://github.com/nothings/stb) :
+    > sudo apt install libstb-dev
+
+
 ### Example :
 
-    > ./ascii ./resources/test.png
+    * > ./ascii -f ./resources/test.png
 
 # Video/Camera to Ascii
 Coverting videos and camera stream to ascii using [opencv](https://github.com/opencv/opencv) library.
+
+### libraries required:
+* ### [stb](https://github.com/nothings/stb) (above):
+ ### [opencv](https://github.com/opencv/opencv) :
+    > sudo apt install libopencv-dev
 
 ### Example :
 * Normal usage open camera:
@@ -28,8 +33,8 @@ Coverting videos and camera stream to ascii using [opencv](https://github.com/op
 * using arguments:
 
     * video path:
-        > ./video_to_ascii ./resources/video.mp4
+        > ./video_to_ascii -f ./resources/video.mp4
     * set width <b>(height set automatically)</b>:
-        > ./video_to_ascii ./resources/video.mp4 150
+        > ./video_to_ascii -f ./resources/video.mp4 -width 150
     * set width & height:
-        > ./video_to_ascii ./resources/video.mp4 500 150
+        > ./video_to_ascii -f ./resources/video.mp4 -width 500 -height 150
