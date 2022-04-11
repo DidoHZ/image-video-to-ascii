@@ -7,10 +7,6 @@ Converting image to ascii using [stblib](https://github.com/nothings/stb) to pro
 
 <img src="resources/test.png" height="500" width="500"> <img src="resources/result.png" height="500" width="500">
 
-### Required library [stb](https://github.com/nothings/stb) :
-    sudo apt install libstb-dev
-
-
 ### Example :
 
     ./ascii -f ./resources/test.png
@@ -18,10 +14,11 @@ Converting image to ascii using [stblib](https://github.com/nothings/stb) to pro
 # Video/Camera to Ascii
 Coverting videos and camera stream to ascii using [opencv](https://github.com/opencv/opencv) library.
 
-### Libraries required:
-* ### [stb](https://github.com/nothings/stb) (above):
- ### [opencv](https://github.com/opencv/opencv) :
-    sudo apt install libopencv-dev
+### libraries required:
+* ### [opencv](https://github.com/opencv/opencv) :
+    * ubuntu :
+        > sudo apt install libopencv-dev
+    * Follow [opencv installation](https://docs.opencv.org/4.x/df/d65/tutorial_table_of_content_introduction.html) for other OS.
 
 ### Example :
 * Normal usage open camera:
